@@ -1,0 +1,14 @@
+select * from employees;
+-- inserting rows into the tables
+insert into employees
+values(1, "Akash", "Singh", 25.50, "2023-01-02");
+
+insert into employees
+values(2, "Harhsit", "Gupta", 56.90, "2023-01-03" ),
+		(3, "Harhsita", "kumar", 99.99, "2023-01-03"),
+        (4, "Harh", "Sharma", 76.90, "2023-05-13" ),
+        (5, "Hari", "Singh", 89.90, "2023-03-09" );
+select * from employees;
+
+insert into employees(employee_id, first_name, last_name)
+values(6, "Vedant", "kutemate");
