@@ -1,0 +1,48 @@
+create table people(first_name varchar(20), last_name varchar(20), age int);
+desc people;
+insert into people(first_name, last_name, age)
+values('Bob', 'Belcher', 42);
+select * from people;
+insert into people(first_name, last_name, age)
+values('Tina', 'Lim', 34),
+		('Raj', 'Singh', 17),
+        ('Dae', 'Ro', 28);
+drop table people;
+show tables;
+-- insert into cats(name, age)
+-- 			values('I know a Cat that lives near my house. Her color uis black and white and she often likes to sleep on the chair in my garden.', 1);
+desc cats;
+insert into cats(name) values('Alabama');
+select * from cats;
+
+insert into cats() values();
+-- To prevent age is not null
+create table cats2(
+name varchar(100) not null,
+age int not null
+);
+desc cats2;
+
+insert into cats2(name) values('Texas');
+select * from cats2;
+
+-- default values
+create table cats3(
+name varchar(20) default 'no name provided',
+age int default 99
+);
+desc cats3;
+
+insert into cats3(age) values(13);
+select * from cats3;
+insert into cats3() values();
+select * from cats3;
+
+insert into cats3(name, age) values('Bob', null);
+select * from cats3;
+create table cats4(
+name varchar(100) not null default 'unnamed',
+age int not null default 99
+);
+-- Below will given an error
+insert into cats4(name, age) values('Cali', null);
