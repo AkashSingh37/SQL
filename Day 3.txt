@@ -1,0 +1,47 @@
+create database hello;
+create database testing;
+show databases;
+drop database hello;
+drop database testing;
+create database dog_walking_app;
+select database();
+use dog_walking_app;
+drop database dog_walking_app;
+
+-- Tables in SQL
+create database cat_app;
+use cat_app;
+create table cats(
+	name varchar(100),
+    age int
+    );
+    
+show tables;
+show columns from cats;
+desc cats;
+
+-- deleting tables
+drop table cats;
+show tables;
+desc cats;
+
+-- Create a pastries table
+create table pastries(name varchar(50), quantity int);
+desc pastries;
+drop table pastries;
+
+-- Inserting data into table 
+create table cats(name varchar(50), age int);
+show tables;
+insert into cats(name, age)
+			values('Blue', 1);
+insert into cats(age, name) values(11, 'Draco');
+desc cats;
+select * from cats;
+
+-- multiple insert
+insert into cats(name, age)
+values('Peanut', 2),
+	   ('Butter', 3),
+       ('Jelly', 4);
+       
