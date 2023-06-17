@@ -46,3 +46,4 @@ age int not null default 99
 );
 -- Below will given an error
 insert into cats4(name, age) values('Cali', null);
+--as we have defined age as not null
