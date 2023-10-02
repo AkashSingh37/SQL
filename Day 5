@@ -1,0 +1,19 @@
+/*
+Enter your query here.
+*/
+
+SELECT 
+CONCAT(
+    -- name,'(',SUBSTRING(Occupation,1,1),')'
+    name,'(',LEFT(Occupation,1),')'
+)
+FROM OCCUPATIONS
+ORDER BY name;
+
+SELECT 
+CONCAT(
+'There are a total of ',COUNT(*),' ',Lower(Occupation),'s.'
+)
+FROM OCCUPATIONS
+GROUP BY Occupation
+ORDER BY COUNT(*),Occupation;
